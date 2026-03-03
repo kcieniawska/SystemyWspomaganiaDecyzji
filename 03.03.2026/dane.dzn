@@ -1,0 +1,8 @@
+% Definicja danych zewnętrznych
+budzet = 1505;
+
+% Lista posiłków
+Posilki = { Owoce, Frytki, Salatka, Skrzydelka, Paluszki, Zestaw_probny };
+
+% Tablica cen przypisana do tych posiłków
+ceny = [215, 275, 335, 355, 420, 580];
