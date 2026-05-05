@@ -1,0 +1,6 @@
+items_n = 10;
+knapsacks_n = 3;
+capacity = 15;
+
+values = [10, 5, 15, 7, 6, 18, 3, 12, 9, 4];
+weights = [2, 3, 5, 7, 1, 4, 1, 6, 4, 2];
