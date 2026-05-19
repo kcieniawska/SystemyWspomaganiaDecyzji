@@ -1,0 +1,268 @@
+[1mtrue.[0m
+
+[fam2].
+
+
+[1mtrue.[0m
+
+trace(matka).
+
+
+[92m%     ]8;;file:///c:/users/karol/desktop/systemywspomaganiadecyzji/cwiczenia_5_prolog/fam2.pl#28\matka/2]8;;\: [all]
+[0m[1mtrue.[0m
+
+matka(kasia, robert).
+
+
+ T [14] [1;32mCall: [0mmatka(kasia, robert)
+ T [14 +0.2ms] [1;32mExit: [0mmatka(kasia, robert)
+[1mtrue.[0m
+
+trace.
+
+
+[1mtrue.[0m
+
+matka(kasia, robert).
+
+
+   [1;32mCall: [0m(14) matka(kasia, robert) ? creep
+   [1;32mCall: [0m(15) prolog_current_frame(_35506) ? creep
+   [1;32mExit: [0m(15) prolog_current_frame(328) ? creep
+^  [1;32mCall: [0m(15) prolog_frame_attribute(328, level, _37272) ? creep
+^  [1;32mExit: [0m(15) prolog_frame_attribute(328, level, 14) ? creep
+   [1;32mCall: [0m(15) get_time(_39078) ? creep
+   [1;32mExit: [0m(15) get_time(1779173381.200967) ? creep
+   [1;32mCall: [0m(15) prolog_trace:on_port(call, user:matka(kasia, robert), #{frame:328, level:14, start:1779173381.200967}) ? creep
+   [1;32mCall: [0m(16) prolog_trace:do_trace(call, user:matka(kasia, robert)) ? creep
+   [1;32mCall: [0m(17) prolog_trace:active_trace_condition(call, user:matka(kasia, robert), _42678) ? creep
+   [1;32mCall: [0m(18) prolog_trace:trace_condition(user:matka(kasia, robert), _43582, _42678) ? creep
+   [1;31mFail: [0m(18) prolog_trace:trace_condition(user:matka(kasia, robert), _43582, _42678) ? creep
+   [1;31mFail: [0m(17) prolog_trace:active_trace_condition(call, user:matka(kasia, robert), _42678) ? creep
+   [1;33mRedo: [0m(16) prolog_trace:do_trace(call, user:matka(kasia, robert)) ? creep
+   [1;32mExit: [0m(16) prolog_trace:do_trace(call, user:matka(kasia, robert)) ? creep
+   [1;32mCall: [0m(16) print_message(debug, frame(user:matka(kasia, robert), trace(call, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;32mCall: [0m(19) print_message_guarded(debug, frame(user:matka(kasia, robert), trace(call, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;32mCall: [0m(20) prolog:message_action(frame(user:matka(kasia, robert), trace(call, #{frame:328, level:14, start:1779173381.200967})), debug) ? creep
+   [1;32mCall: [0m(21) pce_host:abort_exception(frame(user:matka(kasia, robert), trace(call, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;31mFail: [0m(21) pce_host:abort_exception(frame(user:matka(kasia, robert), trace(call, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;31mFail: [0m(20) prolog:message_action(frame(user:matka(kasia, robert), trace(call, #{frame:328, level:14, start:1779173381.200967})), debug) ? creep
+ T [14] [1;32mCall: [0mmatka(kasia, robert)
+   [1;32mExit: [0m(19) print_message_guarded(debug, frame(user:matka(kasia, robert), trace(call, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;32mExit: [0m(16) print_message(debug, frame(user:matka(kasia, robert), trace(call, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;32mCall: [0m(16) prolog_trace:success_port(call) ? creep
+   [1;32mExit: [0m(16) prolog_trace:success_port(call) ? creep
+   [1;32mExit: [0m(15) prolog_trace:on_port(call, user:matka(kasia, robert), #{frame:328, level:14, start:1779173381.200967}) ? creep
+^  [1;32mCall: [0m(15) call_cleanup(call((call_cleanup(call(<closure>(matka/2)(kasia, robert)), _58806=true), (_58806==true->!;true);prolog_trace:on_port(fail, user:matka(kasia, robert), #{frame:328, level:14, start:1779173381.200967}), fail)), _58878=true) ? creep
+^  [1;32mCall: [0m(18) call_cleanup(call(<closure>(matka/2)(kasia, robert)), _58806=true) ? creep
+   [1;32mCall: [0m(20) matka(kasia, robert) ? creep
+   [1;32mCall: [0m(21) rodzic(kasia, robert) ? creep
+   [1;32mExit: [0m(21) rodzic(kasia, robert) ? creep
+   [1;32mCall: [0m(21) kobieta(kasia) ? creep
+   [1;32mExit: [0m(21) kobieta(kasia) ? creep
+   [1;32mExit: [0m(20) matka(kasia, robert) ? creep
+   [1;32mCall: [0m(20) _182=true ? creep
+   [1;32mExit: [0m(20) true=true ? creep
+^  [1;32mExit: [0m(18) call_cleanup(prolog_trace:call(<closure>(matka/2)(kasia, robert)), prolog_trace:(true=true)) ? creep
+   [1;32mCall: [0m(18) true==true ? creep
+   [1;32mExit: [0m(18) true==true ? creep
+   [1;32mCall: [0m(17) _254=true ? creep
+   [1;32mExit: [0m(17) true=true ? creep
+^  [1;32mExit: [0m(15) call_cleanup(prolog_trace:call((call_cleanup(call(<closure>(matka/2)(kasia, robert)), true=true), (true==true->!;true);prolog_trace:on_port(fail, user:matka(kasia, robert), #{frame:328, level:14, start:1779173381.200967}), fail)), prolog_trace:(true=true)) ? creep
+   [1;32mCall: [0m(15) true==true ? creep
+   [1;32mExit: [0m(15) true==true ? creep
+   [1;32mCall: [0m(15) true ? creep
+   [1;32mExit: [0m(15) true ? creep
+   [1;32mCall: [0m(15) prolog_trace:on_port(exit, user:matka(kasia, robert), #{frame:328, level:14, start:1779173381.200967}) ? creep
+   [1;32mCall: [0m(16) prolog_trace:do_trace(exit, user:matka(kasia, robert)) ? creep
+   [1;32mCall: [0m(17) prolog_trace:active_trace_condition(exit, user:matka(kasia, robert), _14478) ? creep
+   [1;32mCall: [0m(18) prolog_trace:trace_condition(user:matka(kasia, robert), _15382, _14478) ? creep
+   [1;31mFail: [0m(18) prolog_trace:trace_condition(user:matka(kasia, robert), _15382, _14478) ? creep
+   [1;31mFail: [0m(17) prolog_trace:active_trace_condition(exit, user:matka(kasia, robert), _14478) ? creep
+   [1;33mRedo: [0m(16) prolog_trace:do_trace(exit, user:matka(kasia, robert)) ? creep
+   [1;32mExit: [0m(16) prolog_trace:do_trace(exit, user:matka(kasia, robert)) ? creep
+   [1;32mCall: [0m(16) print_message(debug, frame(user:matka(kasia, robert), trace(exit, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;32mCall: [0m(19) print_message_guarded(debug, frame(user:matka(kasia, robert), trace(exit, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;32mCall: [0m(20) prolog:message_action(frame(user:matka(kasia, robert), trace(exit, #{frame:328, level:14, start:1779173381.200967})), debug) ? creep
+   [1;32mCall: [0m(21) pce_host:abort_exception(frame(user:matka(kasia, robert), trace(exit, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;31mFail: [0m(21) pce_host:abort_exception(frame(user:matka(kasia, robert), trace(exit, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;31mFail: [0m(20) prolog:message_action(frame(user:matka(kasia, robert), trace(exit, #{frame:328, level:14, start:1779173381.200967})), debug) ? creep
+ T [14 +9946.2ms] [1;32mExit: [0mmatka(kasia, robert)
+   [1;32mExit: [0m(19) print_message_guarded(debug, frame(user:matka(kasia, robert), trace(exit, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;32mExit: [0m(16) print_message(debug, frame(user:matka(kasia, robert), trace(exit, #{frame:328, level:14, start:1779173381.200967}))) ? creep
+   [1;32mCall: [0m(16) prolog_trace:success_port(exit) ? creep
+   [1;32mExit: [0m(16) prolog_trace:success_port(exit) ? creep
+   [1;32mExit: [0m(15) prolog_trace:on_port(exit, user:matka(kasia, robert), #{frame:328, level:14, start:1779173381.200967}) ? creep
+[1mtrue.[0m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+trace(matka/2, +call).
+
+
+^  [1;32mCall: [0m(14) prolog_trace:trace(matka/2, +call) ? creep
+   [1;32mCall: [0m(21) find_predicate_(_35484, matka, 2, _35488) ? creep
+   [1;32mExit: [0m(21) find_predicate_(user, matka, 2, user:matka/2) ? creep
+   [1;31mFail: [0m(21) find_predicate_(_35484, matka, 2, _35488) ? creep
+   [1;32mCall: [0m(15) [user:matka/2]\==[] ? creep
+   [1;32mExit: [0m(15) [user:matka/2]\==[] ? creep
+   [1;32mCall: [0m(15) prolog_trace:'__aux_maplist/2_set_trace_pi+3'([user:matka/2], +call, user:matka/2, user) ? creep
+   [1;32mCall: [0m(16) prolog_trace:set_trace_pi(+call, user:matka/2, user, user:matka/2) ? creep
+   [1;32mCall: [0m(17) prolog_code:pi_head(user:matka/2, _41904) ? creep
+   [1;32mExit: [0m(17) prolog_code:pi_head(user:matka/2, user:matka(_42812, _42814)) ? creep
+   [1;32mCall: [0m(17) prolog_trace:resolve_predicate(user:matka(_42812, _42814), _43714) ? creep
+^  [1;32mCall: [0m(18) predicate_property(user:matka(_42812, _42814), imported_from(_44616)) ? creep
+^  [1;31mFail: [0m(18) predicate_property(user:matka(_42812, _42814), imported_from(_44616)) ? creep
+   [1;33mRedo: [0m(17) prolog_trace:resolve_predicate(user:matka(_42812, _42814), _43714) ? creep
+   [1;32mCall: [0m(18) _43714=user:matka(_42812, _42814) ? creep
+   [1;32mExit: [0m(18) user:matka(_42812, _42814)=user:matka(_42812, _42814) ? creep
+   [1;32mExit: [0m(17) prolog_trace:resolve_predicate(user:matka(_42812, _42814), user:matka(_42812, _42814)) ? creep
+   [1;32mCall: [0m(17) prolog_trace:bind_head(user:matka/2, user:matka(_42812, _42814)) ? creep
+   [1;32mExit: [0m(17) prolog_trace:bind_head(user:matka/2, user:matka(_42812, _42814)) ? creep
+   [1;32mCall: [0m(17) prolog_trace:set_trace(+call, user:matka(_42812, _42814), user) ? creep
+   [1;32mCall: [0m(18) prolog_trace:tracing_mask(user:matka(_42812, _42814), _52686) ? creep
+   [1;32mExit: [0m(18) prolog_trace:tracing_mask(user:matka(_42812, _42814), 15) ? creep
+   [1;32mCall: [0m(18) true ? creep
+   [1;32mExit: [0m(18) true ? creep
+   [1;32mCall: [0m(18) prolog_trace:modify(+call, user:matka(_42812, _42814), 15, _56232, user) ? creep
+   [1;32mCall: [0m(19) var(+call) ? creep
+   [1;31mFail: [0m(19) var(+call) ? creep
+   [1;33mRedo: [0m(18) prolog_trace:modify(+call, user:matka(_42812, _42814), 15, _56232, user) ? creep
+   [1;32mCall: [0m(19) prolog_trace:port_spec(call, user:matka(_42812, _42814), _59824, user) ? creep
+   [1;32mCall: [0m(20) atom(call) ? creep
+   [1;32mExit: [0m(20) atom(call) ? creep
+   [1;32mCall: [0m(20) _59824=call ? creep
+   [1;32mExit: [0m(20) call=call ? creep
+   [1;32mExit: [0m(19) prolog_trace:port_spec(call, user:matka(_182, _184), call, user) ? creep
+   [1;32mCall: [0m(19) prolog_trace:port_mask(call, _1028) ? creep
+   [1;32mExit: [0m(19) prolog_trace:port_mask(call, 1) ? creep
+   [1;32mExit: [0m(18) prolog_trace:modify(+call, user:matka(_182, _184), 15, 15, user) ? creep
+^  [1;32mCall: [0m(18) retractall(tracing_mask(user:matka(_182, _184), _3740)) ? creep
+^  [1;32mExit: [0m(18) retractall(tracing_mask(user:matka(_182, _184), _3740)) ? creep
+   [1;32mCall: [0m(18) 15==[] ? creep
+   [1;31mFail: [0m(18) 15==[] ? creep
+   [1;33mRedo: [0m(17) prolog_trace:set_trace(+call, user:matka(_182, _184), user) ? creep
+   [1;32mCall: [0m(18) 15==0 ? creep
+   [1;31mFail: [0m(18) 15==0 ? creep
+   [1;33mRedo: [0m(17) prolog_trace:set_trace(+call, user:matka(_182, _184), user) ? creep
+^  [1;32mCall: [0m(18) asserta(tracing_mask(user:matka(_182, _184), 15)) ? creep
+^  [1;32mExit: [0m(18) asserta(tracing_mask(user:matka(_182, _184), 15)) ? creep
+   [1;32mCall: [0m(18) prolog_trace:mask_ports(15, _12684) ? creep
+   [1;32mCall: [0m(19) prolog_trace:is_masked(15, _13586, _13590) ? creep
+   [1;32mCall: [0m(20) prolog_trace:port_mask(_13586, _14494) ? creep
+   [1;32mExit: [0m(20) prolog_trace:port_mask(all, 15) ? creep
+   [1;32mExit: [0m(19) prolog_trace:is_masked(15, all, 0) ? creep
+   [1;32mCall: [0m(19) prolog_trace:mask_ports(0, _13588) ? creep
+   [1;32mExit: [0m(19) prolog_trace:mask_ports(0, []) ? creep
+   [1;32mExit: [0m(18) prolog_trace:mask_ports(15, [all]) ? creep
+   [1;32mCall: [0m(18) 15==0 ? creep
+   [1;31mFail: [0m(18) 15==0 ? creep
+   [1;33mRedo: [0m(17) prolog_trace:set_trace(+call, user:matka(_182, _184), user) ? creep
+   [1;32mCall: [0m(18) prolog_trace:wrapper(15, user:matka(_182, _184), _22568, _22570) ? creep
+   [1;32mCall: [0m(19) prolog_trace:wrapper(15, user:matka(_182, _184), #{frame:_23482, level:_23486, start:_23490}, _22568, _23494) ? creep
+   [1;32mCall: [0m(20) prolog_trace:is_masked(15, call, _24406) ? creep
+   [1;32mCall: [0m(21) prolog_trace:port_mask(call, _25310) ? creep
+   [1;32mExit: [0m(21) prolog_trace:port_mask(call, 1) ? creep
+   [1;32mExit: [0m(20) prolog_trace:is_masked(15, call, 14) ? creep
+   [1;32mCall: [0m(20) prolog_trace:wrapper(14, user:matka(_182, _184), #{frame:_23482, level:_23486, start:_23490}, _22568, _28010) ? creep
+   [1;32mCall: [0m(21) prolog_trace:is_masked(14, call, _28922) ? creep
+   [1;32mCall: [0m(22) prolog_trace:port_mask(call, _29826) ? creep
+   [1;32mExit: [0m(22) prolog_trace:port_mask(call, 1) ? creep
+   [1;31mFail: [0m(21) prolog_trace:is_masked(14, call, _28922) ? creep
+   [1;33mRedo: [0m(20) prolog_trace:wrapper(14, user:matka(_182, _184), #{frame:_23482, level:_23486, start:_23490}, _22568, _28010) ? creep
+   [1;32mCall: [0m(21) prolog_trace:is_masked(14, exit, _33442) ? creep
+   [1;32mCall: [0m(22) prolog_trace:port_mask(exit, _34346) ? creep
+   [1;32mExit: [0m(22) prolog_trace:port_mask(exit, 2) ? creep
+   [1;32mExit: [0m(21) prolog_trace:is_masked(14, exit, 12) ? creep
+   [1;32mCall: [0m(21) prolog_trace:wrapper(12, user:matka(_182, _184), #{frame:_23482, level:_23486, start:_23490}, _22568, _37046) ? creep
+   [1;32mCall: [0m(22) prolog_trace:is_masked(12, call, _37958) ? creep
+   [1;32mCall: [0m(23) prolog_trace:port_mask(call, _38862) ? creep
+   [1;32mExit: [0m(23) prolog_trace:port_mask(call, 1) ? creep
+   [1;31mFail: [0m(22) prolog_trace:is_masked(12, call, _37958) ? creep
+   [1;33mRedo: [0m(21) prolog_trace:wrapper(12, user:matka(_182, _184), #{frame:_23482, level:_23486, start:_23490}, _22568, _37046) ? creep
+   [1;32mCall: [0m(22) prolog_trace:is_masked(12, exit, _42478) ? creep
+   [1;32mCall: [0m(23) prolog_trace:port_mask(exit, _43382) ? creep
+   [1;32mExit: [0m(23) prolog_trace:port_mask(exit, 2) ? creep
+   [1;31mFail: [0m(22) prolog_trace:is_masked(12, exit, _42478) ? creep
+   [1;33mRedo: [0m(21) prolog_trace:wrapper(12, user:matka(_182, _184), #{frame:_23482, level:_23486, start:_23490}, _22568, _37046) ? creep
+   [1;32mCall: [0m(22) prolog_trace:is_masked(12, redo, _46998) ? creep
+   [1;32mCall: [0m(23) prolog_trace:port_mask(redo, _47902) ? creep
+   [1;32mExit: [0m(23) prolog_trace:port_mask(redo, 4) ? creep
+   [1;32mExit: [0m(22) prolog_trace:is_masked(12, redo, 8) ? creep
+   [1;32mCall: [0m(22) prolog_trace:wrapper(8, user:matka(_182, _184), #{frame:_23482, level:_23486, start:_23490}, _22568, _50602) ? creep
+   [1;32mCall: [0m(23) prolog_trace:is_masked(8, call, _51514) ? creep
+   [1;32mCall: [0m(24) prolog_trace:port_mask(call, _52418) ? creep
+   [1;32mExit: [0m(24) prolog_trace:port_mask(call, 1) ? creep
+   [1;31mFail: [0m(23) prolog_trace:is_masked(8, call, _51514) ? creep
+   [1;33mRedo: [0m(22) prolog_trace:wrapper(8, user:matka(_182, _184), #{frame:_23482, level:_23486, start:_23490}, _22568, _50602) ? creep
+   [1;32mCall: [0m(23) prolog_trace:is_masked(8, exit, _56034) ? creep
+   [1;32mCall: [0m(24) prolog_trace:port_mask(exit, _56938) ? creep
+   [1;32mExit: [0m(24) prolog_trace:port_mask(exit, 2) ? creep
+   [1;31mFail: [0m(23) prolog_trace:is_masked(8, exit, _56034) ? creep
+   [1;33mRedo: [0m(22) prolog_trace:wrapper(8, user:matka(_182, _184), #{frame:_23482, level:_23486, start:_23490}, _22568, _50602) ? creep
+   [1;32mCall: [0m(23) prolog_trace:is_masked(8, redo, _60554) ? creep
+   [1;32mCall: [0m(24) prolog_trace:port_mask(redo, _61458) ? creep
+   [1;32mExit: [0m(24) prolog_trace:port_mask(redo, 4) ? creep
+   [1;31mFail: [0m(23) prolog_trace:is_masked(8, redo, _60554) ? creep
+   [1;33mRedo: [0m(22) prolog_trace:wrapper(8, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}, _200, _232) ? creep
+   [1;32mCall: [0m(23) prolog_trace:is_masked(8, fail, _1070) ? creep
+   [1;32mCall: [0m(24) prolog_trace:port_mask(fail, _1974) ? creep
+   [1;32mExit: [0m(24) prolog_trace:port_mask(fail, 8) ? creep
+   [1;32mExit: [0m(23) prolog_trace:is_masked(8, fail, 0) ? creep
+   [1;32mCall: [0m(23) prolog_trace:wrapper(0, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}, _200, _4674) ? creep
+   [1;32mExit: [0m(23) prolog_trace:wrapper(0, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}, _200, _200) ? creep
+   [1;32mCall: [0m(23) _232=call((call_cleanup(_200, _6520=true), (_6520==true->!;true);prolog_trace:on_port(fail, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), fail)) ? creep
+   [1;32mExit: [0m(23) call((call_cleanup(_200, _6520=true), (_6520==true->!;true);prolog_trace:on_port(fail, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), fail))=call((call_cleanup(_200, _6520=true), (_6520==true->!;true);prolog_trace:on_port(fail, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), fail)) ? creep
+   [1;32mExit: [0m(22) prolog_trace:wrapper(8, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}, _200, call((call_cleanup(_200, _6520=true), (_6520==true->!;true);prolog_trace:on_port(fail, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), fail))) ? creep
+   [1;32mCall: [0m(22) _228=(call_cleanup(call((call_cleanup(_200, _6520=true), (_6520==true->!;true);prolog_trace:on_port(fail, user:matka(…, …), #{frame:_208, level:_212, start:_216}), fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(redo, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), fail)) ? creep
+   [1;32mExit: [0m(22) (call_cleanup(call((call_cleanup(_200, _6520=true), (_6520==true->!;true);prolog_trace:on_port(fail, user:matka(…, …), #{frame:_208, level:_212, start:_216}), fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(redo, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), fail))=(call_cleanup(call((call_cleanup(_200, _6520=true), (_6520==true->!;true);prolog_trace:on_port(fail, user:matka(…, …), #{frame:_208, level:_212, start:_216}), fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(redo, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), fail)) ? creep
+   [1;32mExit: [0m(21) prolog_trace:wrapper(12, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}, _200, (call_cleanup(call((call_cleanup(_200, _6520=true), (… == … -> !;true);prolog_trace:on_port(fail, … : …, …{… : …, … : …, … : …}), fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(redo, user:matka(…, …), #{frame:_208, level:_212, start:_216}), fail))) ? creep
+   [1;32mCall: [0m(21) _224=((call_cleanup(call((call_cleanup(_200, _6520=true), (… == … -> !;true);prolog_trace:on_port(fail, … : …, …{… : …, … : …, … : …}), fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(redo, user:matka(…, …), #{frame:_208, level:_212, start:_216}), fail)), prolog_trace:on_port(exit, user:matka(_182, _184), #{frame:_208, level:_212, start:_216})) ? creep
+   [1;32mExit: [0m(21) ((call_cleanup(call((call_cleanup(_200, _6520=true), (… == … -> !;true);prolog_trace:on_port(fail, … : …, …{… : …, … : …, … : …}), fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(redo, user:matka(…, …), #{frame:_208, level:_212, start:_216}), fail)), prolog_trace:on_port(exit, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}))=((call_cleanup(call((call_cleanup(_200, _6520=true), (… == … -> !;true);prolog_trace:on_port(fail, … : …, …{… : …, … : …, … : …}), fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(redo, user:matka(…, …), #{frame:_208, level:_212, start:_216}), fail)), prolog_trace:on_port(exit, user:matka(_182, _184), #{frame:_208, level:_212, start:_216})) ? creep
+   [1;32mExit: [0m(20) prolog_trace:wrapper(14, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}, _200, ((call_cleanup(call((call_cleanup(_200, … = …), (… -> …;true);prolog_trace:on_port(…, …, …), fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(redo, … : …, …{… : …, … : …, … : …}), fail)), prolog_trace:on_port(exit, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}))) ? creep
+   [1;32mCall: [0m(20) _220=(prolog_trace:on_port(call, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), (call_cleanup(call((call_cleanup(_200, … = …), (… -> …;true);prolog_trace:on_port(…, …, …), fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(redo, … : …, …{… : …, … : …, … : …}), fail)), prolog_trace:on_port(exit, user:matka(_182, _184), #{frame:_208, level:_212, start:_216})) ? creep
+   [1;32mExit: [0m(20) (prolog_trace:on_port(call, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), (call_cleanup(call((call_cleanup(_200, … = …), (… -> …;true);prolog_trace:on_port(…, …, …), fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(redo, … : …, …{… : …, … : …, … : …}), fail)), prolog_trace:on_port(exit, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}))=(prolog_trace:on_port(call, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), (call_cleanup(call((call_cleanup(_200, … = …), (… -> …;true);prolog_trace:on_port(…, …, …), fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(redo, … : …, …{… : …, … : …, … : …}), fail)), prolog_trace:on_port(exit, user:matka(_182, _184), #{frame:_208, level:_212, start:_216})) ? creep
+   [1;32mExit: [0m(19) prolog_trace:wrapper(15, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}, _200, (prolog_trace:on_port(call, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), (call_cleanup(call((call_cleanup(…, …), (…;…);… : …, fail)), _9258=true), (_9258==true->true;true;prolog_trace:on_port(…, …, …), fail)), prolog_trace:on_port(exit, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}))) ? creep
+   [1;32mCall: [0m(19) _202=(prolog_current_frame(_208), prolog_frame_attribute(_208, level, _212), get_time(_216), prolog_trace:on_port(call, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), (call_cleanup(call((…;…)), _9258=true), (… == … -> true;true;…, …)), prolog_trace:on_port(exit, user:matka(…, …), #{frame:_208, level:_212, start:_216})) ? creep
+   [1;32mExit: [0m(19) (prolog_current_frame(_208), prolog_frame_attribute(_208, level, _212), get_time(_216), prolog_trace:on_port(call, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), (call_cleanup(call((…;…)), _9258=true), (… == … -> true;true;…, …)), prolog_trace:on_port(exit, user:matka(…, …), #{frame:_208, level:_212, start:_216}))=(prolog_current_frame(_208), prolog_frame_attribute(_208, level, _212), get_time(_216), prolog_trace:on_port(call, user:matka(_182, _184), #{frame:_208, level:_212, start:_216}), (call_cleanup(call((…;…)), _9258=true), (… == … -> true;true;…, …)), prolog_trace:on_port(exit, user:matka(…, …), #{frame:_208, level:_212, start:_216})) ? creep
+   [1;32mExit: [0m(18) prolog_trace:wrapper(15, user:matka(_182, _184), _200, (prolog_current_frame(_208), prolog_frame_attribute(_208, level, _212), get_time(_216), prolog_trace:on_port(call, user:matka(…, …), #{frame:_208, level:_212, start:_216}), (call_cleanup(call(…), … = …), (… -> …;…;…)), prolog_trace:on_port(exit, … : …, …{… : …, … : …, … : …}))) ? creep
+^  [1;32mCall: [0m(18) prolog_wrap:wrap_predicate(user:matka(_182, _184), trace, _200, (prolog_current_frame(_208), prolog_frame_attribute(_208, level, _212), get_time(_216), prolog_trace:on_port(call, user:matka(…, …), #{frame:_208, level:_212, start:_216}), (call_cleanup(call(…), … = …), (… -> …;…;…)), prolog_trace:on_port(exit, … : …, …{… : …, … : …, … : …}))) ? creep
+^  [1;32mExit: [0m(18) prolog_wrap:wrap_predicate(user:matka(_182, _184), trace, call(<closure>(matka/2)(_182, _184)), prolog_trace:(prolog_current_frame(_208), prolog_frame_attribute(_208, level, _212), get_time(_216), prolog_trace:on_port(call, … : …, …{… : …, … : …, … : …}), (call_cleanup(…, …), (…;…)), prolog_trace:on_port(…, …, …))) ? creep
+   [1;32mCall: [0m(18) print_message(informational, trace(user:matka(_182, _184), [all])) ? creep
+   [1;32mCall: [0m(21) print_message_guarded(informational, trace(user:matka(_182, _184), [all])) ? creep
+   [1;32mCall: [0m(22) prolog:message_action(trace(user:matka(_182, _184), [all]), informational) ? creep
+   [1;32mCall: [0m(23) pce_host:abort_exception(trace(user:matka(_182, _184), [all])) ? creep
+   [1;31mFail: [0m(23) pce_host:abort_exception(trace(user:matka(_182, _184), [all])) ? creep
+   [1;31mFail: [0m(22) prolog:message_action(trace(user:matka(_182, _184), [all]), informational) ? creep
+[92m%     ]8;;file:///c:/users/karol/desktop/systemywspomaganiadecyzji/cwiczenia_5_prolog/fam2.pl#28\matka/2]8;;\: [all]
+[0m   [1;32mExit: [0m(21) print_message_guarded(informational, trace(user:matka(_182, _184), [all])) ? creep
+   [1;32mExit: [0m(18) print_message(informational, trace(user:matka(_182, _184), [all])) ? creep
+   [1;32mExit: [0m(17) prolog_trace:set_trace(+call, user:matka(_182, _184), user) ? creep
+   [1;32mExit: [0m(16) prolog_trace:set_trace_pi(+call, user:matka/2, user, user:matka/2) ? creep
+   [1;32mCall: [0m(16) prolog_trace:'__aux_maplist/2_set_trace_pi+3'([], +call, user:matka/2, user) ? creep
+   [1;32mExit: [0m(16) prolog_trace:'__aux_maplist/2_set_trace_pi+3'([], +call, user:matka/2, user) ? creep
+   [1;32mExit: [0m(15) prolog_trace:'__aux_maplist/2_set_trace_pi+3'([user:matka/2], +call, user:matka/2, user) ? creep
+^  [1;32mExit: [0m(14) prolog_trace:trace(user:matka/2, +call) ? creep
+[1mtrue.[0m
+
+
+nodebug.
+
+
+[1mtrue.[0m
+
+noprotocol.
+
+

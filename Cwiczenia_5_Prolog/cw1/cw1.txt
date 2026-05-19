@@ -1,0 +1,15 @@
+[1mtrue.[0m
+
+go.
+
+
+What state do you want to know about?
+Type its name, all lower case, followed by a period.
+georgia.
+Its capital is: atlanta
+[1mtrue.[0m
+
+
+noprotocol.
+
+

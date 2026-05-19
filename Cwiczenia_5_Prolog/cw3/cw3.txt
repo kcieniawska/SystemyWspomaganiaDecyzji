@@ -1,0 +1,38 @@
+[1mtrue.[0m
+
+assert(kobieta(kopernik)).
+
+
+[1mtrue.[0m
+
+listing(kobieta).
+
+
+:- dynamic kobieta/1.
+
+kobieta(kasia).
+kobieta(eliza).
+kobieta(magda).
+kobieta(anna).
+kobieta(kopernik).
+
+[1mtrue.[0m
+
+kobieta(K), write(K), write(' to kobieta.'), nl, fail.
+
+
+kasia to kobieta.
+eliza to kobieta.
+magda to kobieta.
+anna to kobieta.
+kopernik to kobieta.
+[1;31mfalse.[0m
+
+retract(kobieta(kopernik)).
+
+
+[1mtrue.[0m
+
+noprotocol.
+
+

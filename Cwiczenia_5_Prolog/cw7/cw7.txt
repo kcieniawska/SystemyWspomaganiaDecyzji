@@ -1,0 +1,121 @@
+[1mtrue.[0m
+
+[silnia].
+
+
+[1mtrue.[0m
+
+trace.
+
+
+[1mtrue.[0m
+
+silnia(3, W).
+
+
+   [1;32mCall: [0m(14) silnia(3, _15586) ? creep
+   [1;32mCall: [0m(15) 3>0 ? creep
+   [1;32mExit: [0m(15) 3>0 ? creep
+   [1;32mCall: [0m(15) _18974 is 3+ -1 ? creep
+   [1;32mExit: [0m(15) 2 is 3+ -1 ? creep
+   [1;32mCall: [0m(15) silnia(2, _20748) ? creep
+   [1;32mCall: [0m(16) 2>0 ? creep
+   [1;32mExit: [0m(16) 2>0 ? creep
+   [1;32mCall: [0m(16) _23414 is 2+ -1 ? creep
+   [1;32mExit: [0m(16) 1 is 2+ -1 ? creep
+   [1;32mCall: [0m(16) silnia(1, _25188) ? creep
+   [1;32mCall: [0m(17) 1>0 ? creep
+   [1;32mExit: [0m(17) 1>0 ? creep
+   [1;32mCall: [0m(17) _27854 is 1+ -1 ? creep
+   [1;32mExit: [0m(17) 0 is 1+ -1 ? creep
+   [1;32mCall: [0m(17) silnia(0, _29628) ? creep
+   [1;32mExit: [0m(17) silnia(0, 1) ? creep
+   [1;32mCall: [0m(17) _25188 is 1*1 ? creep
+   [1;32mExit: [0m(17) 1 is 1*1 ? creep
+   [1;32mExit: [0m(16) silnia(1, 1) ? creep
+   [1;32mCall: [0m(16) _20748 is 2*1 ? creep
+   [1;32mExit: [0m(16) 2 is 2*1 ? creep
+   [1;32mExit: [0m(15) silnia(2, 2) ? creep
+   [1;32mCall: [0m(15) _15586 is 3*2 ? creep
+   [1;32mExit: [0m(15) 6 is 3*2 ? creep
+   [1;32mExit: [0m(14) silnia(3, 6) ? creep
+W = 6 [1m.[0m
+
+
+
+
+
+
+
+
+
+
+
+a
+
+
+nodebug.
+
+
+[1;31mERROR: Syntax error: Operator expected
+ERROR: a
+
+
+ERROR: ** here **
+ERROR: 
+nodebug . 
+[0mnodebug.
+
+
+[1mtrue.[0m
+
+[fib].
+
+
+[1mtrue.[0m
+
+trace.
+
+
+[1mtrue.[0m
+
+fib(3, W).
+
+
+   [1;32mCall: [0m(14) fib(3, _11716) ? creep
+   [1;32mCall: [0m(15) 3>1 ? creep
+   [1;32mExit: [0m(15) 3>1 ? creep
+   [1;32mCall: [0m(15) _15104 is 3+ -1 ? creep
+   [1;32mExit: [0m(15) 2 is 3+ -1 ? creep
+   [1;32mCall: [0m(15) _16884 is 3+ -2 ? creep
+   [1;32mExit: [0m(15) 1 is 3+ -2 ? creep
+   [1;32mCall: [0m(15) fib(2, _18658) ? creep
+   [1;32mCall: [0m(16) 2>1 ? creep
+   [1;32mExit: [0m(16) 2>1 ? creep
+   [1;32mCall: [0m(16) _21324 is 2+ -1 ? creep
+   [1;32mExit: [0m(16) 1 is 2+ -1 ? creep
+   [1;32mCall: [0m(16) _23104 is 2+ -2 ? creep
+   [1;32mExit: [0m(16) 0 is 2+ -2 ? creep
+   [1;32mCall: [0m(16) fib(1, _24878) ? creep
+   [1;32mExit: [0m(16) fib(1, 1) ? creep
+   [1;32mCall: [0m(16) fib(0, _26652) ? creep
+   [1;32mExit: [0m(16) fib(0, 0) ? creep
+   [1;32mCall: [0m(16) _18658 is 1+0 ? creep
+   [1;32mExit: [0m(16) 1 is 1+0 ? creep
+   [1;32mExit: [0m(15) fib(2, 1) ? creep
+   [1;32mCall: [0m(15) fib(1, _166) ? creep
+   [1;32mExit: [0m(15) fib(1, 1) ? creep
+   [1;32mCall: [0m(15) _92 is 1+1 ? creep
+   [1;32mExit: [0m(15) 2 is 1+1 ? creep
+   [1;32mExit: [0m(14) fib(3, 2) ? creep
+W = 2 [1m.[0m
+
+
+nodebug.
+
+
+[1mtrue.[0m
+
+noprotocol.
+
+

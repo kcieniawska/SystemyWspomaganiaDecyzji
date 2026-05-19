@@ -1,0 +1,66 @@
+[1mtrue.[0m
+
+[blocks].
+
+
+[1mtrue.[0m
+
+above(a, c).
+
+
+[1;31mfalse.[0m
+
+above(a, Co).
+
+
+[1;31mfalse.[0m
+
+[hanoi].
+
+
+[1mtrue.[0m
+
+move(3, left, right, center).
+
+
+Przenies dysk 1 z poziomu left na right
+Przenies dysk 2 z poziomu left na center
+Przenies dysk 1 z poziomu right na center
+Przenies dysk 3 z poziomu left na right
+Przenies dysk 1 z poziomu center na left
+Przenies dysk 2 z poziomu center na right
+Przenies dysk 1 z poziomu left na right
+[1mtrue [0m
+Unknown action:  (h for help)
+Action? [
+Unknown action: [ (h for help)
+Action? A
+Unknown action: A (h for help)
+Action? ESC 
+
+Unknown action:  (h for help)
+Action? [
+Unknown action: [ (h for help)
+Action? A
+Unknown action: A (h for help)
+Action? ESC 
+
+Unknown action:  (h for help)
+Action? ESC 
+[1m.[0m
+
+[mapa].
+
+
+[1mtrue.[0m
+
+koloruj(A, B, C, D, E).
+
+
+A = E, E = czerwony,
+B = D, D = zielony,
+C = niebieski [1m.[0m
+
+noprotocol.
+
+

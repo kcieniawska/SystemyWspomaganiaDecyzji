@@ -1,0 +1,381 @@
+[1mtrue.[0m
+
+[fam2].
+
+
+[1mtrue.[0m
+
+listing.
+
+
+
+ojciec(X, Y) :-
+    rodzic(X, Y),
+    mezczyzna(X).
+
+:- dynamic pce_post_expansion_hook/2.
+:- multifile pce_post_expansion_hook/2.
+
+
+:- multifile message_property/2.
+
+
+dziadkowie(X, Y) :-
+    rodzic(X, Z),
+    rodzic(Z, Y).
+
+:- dynamic library_directory/1.
+:- multifile library_directory/1.
+
+
+:- dynamic term_expansion/4.
+:- multifile term_expansion/4.
+
+
+dziadek(X, Y) :-
+    dziadkowie(X, Y),
+    mezczyzna(X).
+
+:- dynamic portray/1.
+:- multifile portray/1.
+
+portray(Obj) :-
+    pce_portray:
+    (   Obj= @(Ref),
+        object(Obj),
+        !,
+        (   send(Obj, '_instance_of'(var))
+        ->  get(Obj, '_value', Value),
+            format('@~w(= ~p)', [Ref, Value])
+        ;   get(Obj, '_class_name', CN),
+            format('@~w/~w', [Ref, CN])
+        )
+    ).
+portray(pce_principal:send_implementation(Id, Args, Receiver)) :-
+    pce_portray:
+    (   object(Receiver),
+        !,
+        method_from_id(Id, (Class->_Method)),
+        format('Send-method on ~p: ~w->~p',
+               [Receiver, Class, Args])
+    ).
+portray(pce_principal:get_implementation(Id, Args, Receiver, RVal)) :-
+    pce_portray:
+    (   object(Receiver),
+        !,
+        method_from_id(Id, <-(Class, _Method)),
+        format('Get-method on ~p: ~w<-~p --> ~p',
+               [Receiver, Class, Args, RVal])
+    ).
+
+babcia(X, Y) :-
+    dziadkowie(X, Y),
+    kobieta(X).
+
+rodzic(kasia, robert).
+rodzic(tomek, robert).
+rodzic(tomek, eliza).
+rodzic(robert, anna).
+rodzic(robert, magda).
+rodzic(magda, jan).
+
+:- dynamic term_expansion/2.
+:- multifile term_expansion/2.
+
+
+potomek(X, Y) :-
+    rodzic(Y, X).
+
+matka(X, Y) :-
+    rodzic(X, Y),
+    kobieta(X).
+
+:- multifile prolog_predicate_name/2.
+
+prolog_predicate_name(pce_principal:send_implementation(Id0, _, _), Id) :-
+    pce_portray:
+    (   method_from_id(Id0, SG),
+        atom_from_method(SG, Id)
+    ).
+prolog_predicate_name(pce_principal:get_implementation(Id0, _, _, _), Id) :-
+    pce_portray:
+    (   method_from_id(Id0, SG),
+        atom_from_method(SG, Id)
+    ).
+
+:- dynamic kobieta/1.
+
+kobieta(kasia).
+kobieta(eliza).
+kobieta(magda).
+kobieta(anna).
+
+go :-
+    write('What state do you want to know about?'),
+    nl,
+    write('Type its name, all lower case, followed by a period.'),
+    nl,
+    read(A),
+    capital_of(A, B),
+    write('Its capital is: '),
+    write(B),
+    nl.
+
+mezczyzna(tomek).
+mezczyzna(robert).
+mezczyzna(jan).
+
+:- dynamic resource/3.
+:- multifile resource/3.
+
+
+:- dynamic file_search_path/2.
+:- multifile file_search_path/2.
+
+file_search_path(library, A) :-
+    user:library_directory(A).
+file_search_path(swi, A) :-
+    system:current_prolog_flag(home, A).
+file_search_path(swi, A) :-
+    system:current_prolog_flag(shared_home, A).
+file_search_path(library, app_config(lib)).
+file_search_path(library, swi(library)).
+file_search_path(library, swi(library/clp)).
+file_search_path(library, A) :-
+    system:'$ext_library_directory'(A).
+file_search_path(path, A) :-
+    system:
+    (   getenv('PATH', B),
+        current_prolog_flag(path_sep, C),
+        atomic_list_concat(D, C, B),
+        '$member'(A, D)
+    ).
+file_search_path(user_app_data, A) :-
+    system:'$xdg_prolog_directory'(data, A).
+file_search_path(common_app_data, A) :-
+    system:'$xdg_prolog_directory'(common_data, A).
+file_search_path(user_app_config, A) :-
+    system:'$xdg_prolog_directory'(config, A).
+file_search_path(common_app_config, A) :-
+    system:'$xdg_prolog_directory'(common_config, A).
+file_search_path(app_data, user_app_data('.')).
+file_search_path(app_data, common_app_data('.')).
+file_search_path(app_config, user_app_config('.')).
+file_search_path(app_config, common_app_config('.')).
+file_search_path(app_preferences, user_app_config('.')).
+file_search_path(user_profile, app_preferences('.')).
+file_search_path(app, swi(app)).
+file_search_path(app, app_data(app)).
+file_search_path(working_directory, A) :-
+    system:working_directory(A, A).
+file_search_path(autoload, swi(library)).
+file_search_path(autoload, pce(prolog/lib)).
+file_search_path(autoload, app_config(lib)).
+file_search_path(autoload, Dir) :-
+    '$autoload':'$ext_library_directory'(Dir).
+file_search_path(pack, app_data(pack)).
+file_search_path(library, PackLib) :-
+    '$pack':pack_dir(_Name, prolog, PackLib).
+file_search_path(foreign, PackLib) :-
+    '$pack':pack_dir(_Name, foreign, PackLib).
+file_search_path(app, AppDir) :-
+    '$pack':pack_dir(_Name, app, AppDir).
+file_search_path(pce, swi(xpce)) :-
+    link_xpce:has_xpce_library.
+file_search_path(library, pce('prolog/lib')) :-
+    link_xpce:has_xpce_library.
+file_search_path(foreign, pce(ArchLib)) :-
+    link_xpce:
+    (   has_xpce_library,
+        current_prolog_flag(arch, Arch),
+        atom_concat('lib/', Arch, ArchLib)
+    ).
+file_search_path(foreign, swi(bin)).
+file_search_path(demo, pce('prolog/demo')).
+file_search_path(contrib, pce('prolog/contrib')).
+file_search_path(image, pce(bitmaps)).
+
+:- dynamic expand_query/4.
+:- multifile expand_query/4.
+
+
+:- dynamic goal_expansion/4.
+:- multifile goal_expansion/4.
+
+
+:- dynamic resource/2.
+:- multifile resource/2.
+
+
+capital_of(georgia, atlanta).
+capital_of(florida, tallahassee).
+
+:- dynamic pce_pre_expansion_hook/2.
+:- multifile pce_pre_expansion_hook/2.
+
+
+:- dynamic exception/3.
+:- multifile exception/3.
+
+
+:- multifile prolog_clause_name/2.
+
+prolog_clause_name(Ref, Name) :-
+    pce_portray:
+    (   clause(Head, _, Ref),
+        user:prolog_predicate_name(Head, Name)
+    ).
+
+madziecko(X) :-
+    rodzic(X, _).
+
+:- dynamic expand_answer/2.
+:- multifile expand_answer/2.
+
+
+dwojedzieci(X) :-
+    rodzic(X, Y),
+    siostra(_, Y).
+
+:- thread_local thread_message_hook/3.
+:- dynamic thread_message_hook/3.
+:- volatile thread_message_hook/3.
+
+[32m%   Calling thread (con1) has no clauses for thread_message_hook/3. Other threads have:
+[0m[32m%      1 clauses in thread main
+[0m
+:- dynamic goal_expansion/2.
+:- multifile goal_expansion/2.
+
+
+szczesciarz(X) :-
+    madziecko(X).
+
+:- multifile url_path/2.
+
+url_path(swipl, 'http://www.swi-prolog.org').
+url_path(swipl_book, 'http://books.google.nl/books/about/SWI_Prolog_Reference_Manual_6_2_2.html?id=q6R3Q3B-VC4C&redir_esc=y').
+url_path(swipl_faq, swipl('FAQ')).
+url_path(swipl_man, swipl('pldoc/doc_for?object=manual')).
+url_path(swipl_mail, swipl('Mailinglist.html')).
+url_path(swipl_download, swipl('Download.html')).
+url_path(swipl_pack, swipl('pack/list')).
+url_path(swipl_bugs, swipl('bug.html')).
+url_path(swipl_quick, swipl('man/quickstart.html')).
+
+:- dynamic prolog_load_file/2.
+:- multifile prolog_load_file/2.
+
+
+ciocia(X, Y) :-
+    rodzic(Z, Y),
+    siostra(X, Z).
+
+:- dynamic prolog_file_type/2.
+:- multifile prolog_file_type/2.
+
+prolog_file_type(pl, prolog).
+prolog_file_type(prolog, prolog).
+prolog_file_type(qlf, prolog).
+prolog_file_type(pl, source).
+prolog_file_type(prolog, source).
+prolog_file_type(qlf, qlf).
+prolog_file_type(A, executable) :-
+    system:current_prolog_flag(shared_object_extension, A).
+prolog_file_type(dylib, executable) :-
+    system:current_prolog_flag(apple, true).
+
+:- dynamic message_hook/3.
+:- multifile message_hook/3.
+
+
+wnuk(X, Z) :-
+    rodzic(Y, X),
+    rodzic(Z, Y).
+
+:- multifile prolog_list_goal/1.
+
+prolog_list_goal(pce_principal:send_implementation(Id, _Args, _Ref)) :-
+    pce_portray:
+    (   !,
+        (   Head=pce_principal:send_implementation(Id, Args, Ref),
+            method_from_id(Id, (Class->Sel)),
+            clause(Head, Body)
+        ->  format('~N~n% XPCE Method ~w->~w:~n~n', [Class, Sel]),
+            portray_clause((Ref->Args:-Body)),
+            nl
+        ;   format('No XPCE method implementation for id=~p~n', [Id])
+        )
+    ).
+prolog_list_goal(pce_principal:get_implementation(Id, _Args, _Ref, _Rval)) :-
+    pce_portray:
+    (   !,
+        (   Head=pce_principal:get_implementation(Id, Args, Ref, Rval),
+            method_from_id(Id, <-(Class, Sel)),
+            clause(Head, Body)
+        ->  format('~N~n% XPCE Method ~w<-~w:~n~n', [Class, Sel]),
+            portray_clause((Rval= <-(Ref, Args):-Body)),
+            nl
+        ;   format('No XPCE method implementation for id=~p~n', [Id])
+        )
+    ).
+
+brat(X, Y) :-
+    rodzic(Z, X),
+    rodzic(Z, Y),
+    mezczyzna(X),
+    X\=Y.
+
+siostra(X, Y) :-
+    rodzic(Z, X),
+    rodzic(Z, Y),
+    kobieta(X),
+    X\=Y.
+
+przodek(X, Y) :-
+    rodzic(X, Y).
+przodek(X, Z) :-
+    rodzic(X, Y),
+    przodek(Y, Z).
+[1mtrue.[0m
+
+kobieta(K), write(K), write(' to kobieta.'), nl.
+
+
+kasia to kobieta.
+K = kasia [1m.[0m
+
+kobieta(K), write(K), write(' to kobieta.'), nl, fail.
+
+
+kasia to kobieta.
+eliza to kobieta.
+magda to kobieta.
+anna to kobieta.
+[1;31mfalse.[0m
+
+kobieta(K), fail.
+
+
+[1;31mfalse.[0m
+
+[capitals].
+
+
+[33mWarning: ]8;;file:///c:/users/karol/desktop/systemywspomaganiadecyzji/cwiczenia_5_prolog/capitals.pl#13\c:/users/karol/desktop/systemywspomaganiadecyzji/cwiczenia_5_prolog/capitals.pl:13]8;;\:
+Warning:    Redefined static procedure capital_of/2
+Warning:    Previously defined at ]8;;file:///c:/users/karol/desktop/systemywspomaganiadecyzji/cwiczenia_5_prolog/interac.pl#11\c:/users/karol/desktop/systemywspomaganiadecyzji/cwiczenia_5_prolog/interac.pl:11]8;;\
+[0m[1mtrue.[0m
+
+capital_of(Stan, Stolica), write(Stolica), write(' to stolica stanu '), write(Stan), nl, fail.
+
+
+atlanta to stolica stanu georgia
+sacramento to stolica stanu california
+tallahassee to stolica stanu florida
+augusta to stolica stanu maine
+[1;31mfalse.[0m
+
+noprotocol.
+
+
